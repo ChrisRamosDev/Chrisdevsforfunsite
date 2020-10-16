@@ -1,10 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Chris Devs for Fun`,
+    description: `A fun site developed for fun.`,
+    author: `@crash7114`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"),
+        ],
+      },
+    },
+    "gatsby-plugin-postcss",
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
