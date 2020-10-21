@@ -138,11 +138,41 @@ table {
 }
 
 :root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --mq-sm: 479px;
+  --mq-md: 639px;
+  --mq-lg: 1023px;
+  --mq-2x: 1919px;
+  --mq-xl: 1365px;
   font-family: "Source Sans Pro", sans-serif;
 }
 
+main {
+  width: clamp(var(--mq-sm), var(--mq-lg), var(--mq-xl));
+  margin: 0 auto;
+}
+
 h1 {
-  font-size: 2rem;
+  font-size: var(--s3);
+}
+
+h2 {
+  font-size: var(--s2);
+}
+
+h3 {
+  font-size: var(--s1);
 }
 
 .cover {
@@ -175,7 +205,12 @@ h1 {
 }
 
 .flow > * + * {
-  margin-top: 2rem;
+  margin-top: var(--flow-sm);
+  margin-top: var(--s2);
+}
+
+.blog-content {
+  max-width: 70ch;
 }
 
 .wrapper {
