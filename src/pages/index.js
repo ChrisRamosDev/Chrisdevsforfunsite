@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Video from "../components/video"
@@ -22,7 +22,7 @@ const Home = () => {
       </p>
       <p className="[ text-center text-lg ]">
         Please check back again soon!
-        <Link to="/page-2">&nbsp;But heres a Link to my blog</Link>
+        {/* <Link to="/page-2">&nbsp;But heres a Link to my blog</Link> */}
       </p>
     </Layout>
   )
